@@ -12,3 +12,5 @@ The database schema reflects the marketplace ecosystem:
 - Reviews capture customer experience and satisfaction.
 
 The aim is to uncover patterns in purchasing, retention, and regional demand that can inform business strategy. By combining SQL queries for structured analysis with Python for clear visual storytelling, the project demonstrates how data can guide marketplace growth and operational decisions.
+
+<img width="3000" height="2325" alt="image" src="https://github.com/user-attachments/assets/325ab0ab-1c7b-453e-abaf-beb17e334aa6" />
