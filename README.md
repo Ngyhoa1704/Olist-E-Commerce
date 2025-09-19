@@ -96,6 +96,70 @@ This shows that Olist’s main challenge is not acquiring customers, but keeping
 When we link this back to earlier findings, especially the delivery and review analysis, the problem becomes clearer: logistics delays are a major reason why many customers don’t return. Reviews show “did not receive product” or “delayed delivery” as the most frequent complaints, which can directly explain why repeat rates are so low. This suggests that retention is not just a marketing issue but also an operational one. By reducing shipping delays and improving reliability, Olist would likely see a natural lift in repeat buyers, strengthening the Loyal and Champion segments.
 
 
+### Customer Lifetime Value
+To start, we'll calculate each of the components of CLV for each client:
+- Purchase Frequency (PF), the number of orders a client placed.
+- Average Order Value (AOV), the sum of payments divided by the number of orders.
+- Average Customer Lifespan (ACL), the number of weeks from the first to the last order, with a minimum value of 1.
+
+To make the code more readable, I'll use a CTE to gather the necessary data, then in the main query I'll calculate each of the CLV components:
+
+<img width="530" height="316" alt="image" src="https://github.com/user-attachments/assets/0e502290-a785-403b-9ec4-8debb10e4e14" />
+
+We can calculate the average CLV and the number of customers for each zip code prefix. To calculate CLV we just multiply each of its terms: CLV = PF * AOV * ACL
+
+<img width="467" height="348" alt="image" src="https://github.com/user-attachments/assets/2a343895-dfdc-4653-9cb4-65a7e4977146" />
+
+<img width="906" height="548" alt="image" src="https://github.com/user-attachments/assets/83f6bd2d-94d9-4ae0-8213-9f65ba12c87a" />
+
+The analysis starts by calculating CLV using three main inputs: purchase frequency (PF), average order value (AOV), and average customer lifespan (ACL). Since most customers buy only once, ACL is fixed at 1, meaning CLV depends mainly on frequency and order value. The data shows strong differences between customers: some have very low CLV due to single low-value purchases, while others—though fewer—contribute much higher CLV through bigger baskets.
+
+When aggregated by zip code prefix, we see not only average CLV but also customer density. Plotting this on the heatmap shows that Southeast and South Brazil dominate. Cities like São Paulo, Rio de Janeiro, and Belo Horizonte appear as bright clusters, combining both high customer counts and higher average CLV. These regions are clearly the commercial core and should be the focus for retention and loyalty programs.
+
+At the same time, some smaller inland or southern areas, while contributing fewer customers, show pockets of higher-than-average CLV. This suggests niche high-value markets where Olist can capture premium segments, even if overall volume is lower. These might represent wealthy neighborhoods, business hubs, or areas underserved by physical retail, pushing customers toward higher-value online purchases.
+
+The key business insight here is twofold:
+1. Focus on urban hubs (São Paulo, Rio de Janeiro, Belo Horizonte) for scale and steady CLV growth.
+2. Experiment with tailored campaigns in smaller but high-value zip codes to extract extra profitability from niche clusters.
+
+
+
+### Seller
+<img width="937" height="523" alt="image" src="https://github.com/user-attachments/assets/1f7a6b21-9111-4607-bfb7-0bdf998bd7eb" />
+
+Most sellers cluster around moderate sales volumes with review scores between 3.5 and 4.5. Only a small group dominates overall revenue, combining very high order volumes with consistently strong ratings above 4.0. This points to a marketplace structure where growth is concentrated in a few top sellers, while the majority remain low-scale operators. Interestingly, there are sellers who maintain strong reviews but low sales, suggesting untapped growth if they can scale up. On the other side, some with high sales but weaker reviews may face long-term risks from dissatisfied customers.
+
+<img width="954" height="594" alt="image" src="https://github.com/user-attachments/assets/8d846c40-d7fc-426d-a2ae-abb14e3e2de4" />
+The order distribution confirms this imbalance: more than half of sellers handle fewer than 10 orders, while only a tiny fraction process more than 1,000. This means the platform is heavily fragmented, with many casual or small-scale sellers and just a handful of power players driving the bulk of transactions.
+
+<img width="900" height="592" alt="image" src="https://github.com/user-attachments/assets/6d0ac8c4-d5b3-45bf-8739-cf1ebc5c5796" />
+Looking at delivery times by seller size, large sellers (1,000+ orders) show more variation and often slower averages than smaller sellers. This could be due to operational strain, broader shipping networks, or higher reliance on logistics partners. Smaller sellers, though fewer in orders, sometimes deliver faster and more consistently. This highlights a trade-off between scale and efficiency: while bigger sellers dominate sales, their fulfillment speed can be less reliable compared to leaner, localized sellers.
+
+
+### Olist E-commerce Project – Wrap Up
+In this project, I analyzed the Olist dataset, which covers over 99,000 orders in Brazil, to uncover insights about customer behavior, product sales, logistics, reviews, and seller performance. Using SQL for data manipulation and Python for visualization, I connected different datasets to form a clear picture of how the marketplace operates.
+
+**Key Findings**: 
+1. **Order Pricing & Product Categories** – The average order was around R$160, but most purchases were much smaller, showing a skewed distribution with a few very high-value transactions. Health & beauty, watches & gifts, and home categories drove the highest sales, while product weights varied widely across categories.
+2. **Logistics & Delivery** – Delivery bottlenecks appeared mainly in the “delivered to customer” stage, not at the start of the process. Customers in São Paulo and nearby hubs received orders faster, while more distant cities like Salvador faced long delays. Seasonal patterns showed delivery times spiking during Black Friday and Christmas, confirming logistics strain during peak shopping months.
+3. **Customer Reviews** – Although most reviews were positive (over half gave 5 stars), negative feedback focused heavily on late or missing deliveries (“não recebi o produto” – “I didn’t receive the product”). This ties back directly to the delivery analysis, confirming logistics as the main source of dissatisfaction.
+4. **Customer Segmentation (RFM)** – RFM analysis revealed that only a small fraction of customers became repeat buyers (3%). Most were one-time shoppers, which limits long-term growth. Loyal and Champion customers drove the highest revenue, while groups like Hibernating and Lost represented large but low-value clusters. This showed the importance of retention strategies such as loyalty programs and follow-up offers.
+5. **Customer Lifetime Value (CLV)** – Geographic heatmaps showed CLV was strongest in Brazil’s Southeast and South regions, especially São Paulo, Rio de Janeiro, and Belo Horizonte. These areas had both high customer counts and higher spending, making them the priority markets for Olist. Smaller inland areas contributed fewer buyers but sometimes higher CLV, suggesting targeted opportunities in niche regions.
+6. **Sellers** – The marketplace was highly fragmented: over half of sellers had fewer than 10 orders, while only a handful exceeded 1,000. A small elite group of sellers dominated total sales, combining high volumes with strong ratings. However, these larger sellers also faced longer delivery times compared to smaller sellers, highlighting a trade-off between scale and efficiency.
+
+**Overall business story:**
+The analysis shows that Olist’s growth depends less on acquiring new customers and more on improving repeat purchases and seller efficiency. Logistics delays are the biggest source of customer dissatisfaction, which feeds directly into poor reviews and weak retention. Meanwhile, most sales come from a small group of sellers and a few key regions, meaning expansion should focus on strengthening seller operations and customer loyalty programs in those core markets.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
