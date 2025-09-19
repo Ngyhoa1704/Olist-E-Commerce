@@ -3,7 +3,7 @@
 
 This project analyzes the **Olist e-commerce dataset**, which contains nearly 100,000 orders placed in Brazil between March 2016 and August 2018. Olist is a marketplace that connects small businesses to larger online retail platforms, allowing sellers from across the country to reach a wider customer base.
 
-The dataset is rich and relational, covering orders, payments, customers, sellers, products, reviews, and geographic information. Using SQL for data extraction and transformation, and Python for visualization, the analysis explores customer behavior, order trends, seller performance, and regional demand.
+The dataset is rich and relational, covering orders, payments, customers, sellers, products, reviews, and geographic information. Using SQL for data extraction and transformation, and Python for visualization, the analysis explores customer behavior, order trends, seller performance, and regional demand. This project uses the [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) available on Kaggle.
 
 The database schema reflects the marketplace ecosystem:
 - Orders and payments provide transaction details.
