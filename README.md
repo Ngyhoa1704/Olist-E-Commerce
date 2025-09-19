@@ -43,8 +43,6 @@ When looking at shipping, most fees stay below R$80, with a peak between R$10 an
 In business terms, these findings highlight two key customer groups: a large base of budget-conscious shoppers and a smaller group of high-spending buyers. For Olist, this creates an opportunity to balance strategies between volume-driven low-cost products and targeted offers for premium customers. At the same time, shipping policies can be used as a lever — for example, offering free delivery above a certain threshold could motivate customers to increase their basket size.
 
 ### Product Categories
-<img width="937" height="772" alt="image" src="https://github.com/user-attachments/assets/3051d85c-35be-4649-9143-67ce61591eb3" />
-
 <img width="962" height="465" alt="image" src="https://github.com/user-attachments/assets/5bdfda76-f6af-4c3f-b21d-ff9fe4f81fba" />
 
 The product category analysis shows how Olist’s marketplace is structured and which segments drive sales. Out of 71 categories, the top ten dominate overall performance, with **health and beauty** leading, followed by **watches & gifts, bed & bath, sports & leisure,** and **computer accessories**. These categories together account for a major share of sales, while the remaining long tail of categories adds up to a smaller but still meaningful contribution under “Other categories.” This concentration suggests that Olist’s growth is powered by everyday essentials and lifestyle products, which are in high demand online.
